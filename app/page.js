@@ -11,7 +11,7 @@ export default function Home() {
         alt ="logo"
         priority/> </li>
         <li className="flex items-center ">
-          <select className="bg-[#D4D4D4] rounded-md h-10">
+          <select className="bg-[#D4D4D4] rounded-md h-10 cursor-pointer">
             <option className=""> Todos</option>
             <option> 1</option>
             <option> 2</option>
@@ -26,18 +26,18 @@ export default function Home() {
           <div className="flex items-center relative">
           <input id = "inputPesquisa"type='text'placeholder="Pesquisa devioteca" className=" text-center  w-96 h-10 border-2 border-black rounded-md "></input>
           <Image src={'/lupa.png'}
-          className="bg-[#F3A847] p-2 rounded-md absolute left-80 ml-6 "
+          className="bg-[#F3A847] p-2 cursor-pointer rounded-md absolute left-80 ml-6 "
           width={40}
           height={30}
           priority/>
           </div>
         </li>
         <li className="flex items-center p-2">
-          <select className="rounded-md h-10">
+          <select className="rounded-md h-10 cursor-pointer">
             <option>Login</option>
           </select>
           <Image src={"/img-cart.png"}
-          className="ml-5"
+          className="ml-5 cursor-pointer"
           width={30}
           height={30}
           priority/>
