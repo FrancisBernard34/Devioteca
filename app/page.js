@@ -2,8 +2,11 @@
 import Modal from "./components/modal"
 import Image from "next/image";
 
+import { useState } from "react";
 
 export default function Home() {
+  const [open, setOpen] = useState(false)
+
   return (
     <header className="">
       <ul className="flex justify-evenly p-4 bg-stone-700">
@@ -37,22 +40,27 @@ export default function Home() {
           priority/>
           </div>
         </li>
-        <div className="flex p-2">
-          <div className=" bg-[#D4D4D4] gap-3 flex w-full p-5 rounded-md h-full cursor-pointer">
-            <h3>Login</h3>
-            <Image src={"/down-arrow.png"}
-            width={20}
-            height={10}
-            alt={'seta'}
-            priority />
-            <Modal isOpen={true}/>
+        <div className="flex flex-col p-2">
+          <div className="flex flex-row ">
+            <div className=" bg-[#D4D4D4]  gap-3 flex w-full p-5 rounded-md h-full cursor-pointer" 
+            onClick={() => setOpen(!open)}>
+              <h3>Login</h3>
+              <Image src={"/down-arrow.png"}
+              width={20}
+              height={10}
+              alt={'seta'}
+              priority />
             </div>
-          <Image src={"/img-cart.png"}
-          className="ml-5 cursor-pointer"
-          width={30}
-          height={30}
-          priority
-          alt="Carrinho"/>
+            <Image src={"/img-cart.png"}
+            className="ml-5 cursor-pointer"
+            width={30}
+            height={30}
+            priority
+            alt="Carrinho"/>
+          </div>
+          <div>
+            {open && <Modal/>}
+          </div>
         </div>
         </ul>
      
