@@ -43,7 +43,7 @@ export default function Home() {
           </li>
           <div className="flex flex-col p-2 z-50">
             <div className="flex flex-row z-50 h-full">
-              <div className=" bg-[#D4D4D4] gap-2 flex w-full h-full items-center justify-center p-1 rounded-md cursor-pointer z-50"
+              <div className=" bg-[#D4D4D4] gap-2 flex w-full h-full items-center justify-center p-5 rounded-md cursor-pointer z-50"
                 onClick={() => setOpen(!open)}>
                 <h3>Login</h3>
                 <Image src={"/down-arrow.png"}
