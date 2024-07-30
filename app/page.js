@@ -1,5 +1,6 @@
 'use client'
 import Modal from "./components/modal"
+import BookCarousel from "./components/BookCarousel";
 import Image from "next/image";
 
 import { useState } from "react";
@@ -9,7 +10,7 @@ export default function Home() {
 
   return (
     <>
-      <header className="max-h-24 h-24">
+      <header className="h-full">
         <ul className="flex justify-evenly p-4 bg-stone-700 h-full">
           <li className="self-center"> <Image
             src={"/img-devioteca.jpeg"}
@@ -73,7 +74,13 @@ export default function Home() {
           <li className="px-5 py-2">Novidades na Devioteca</li>
         </ul>
       </header>
-      {open && <div class="fixed inset-x-0 inset-y-[6rem] w-full h-full bg-gray-500 opacity-20 z-40"></div>}
+      <main className="px-8 py-36">
+        <div className="flex flex-col justify-start gap-8">
+          <h2 className="text-2xl font-bold">Recomendados para você:</h2>
+          <BookCarousel />
+        </div>
+      </main>
+      {open && <div class="fixed inset-x-0 inset-y-[9rem] w-full h-full bg-gray-500 opacity-20 z-40"></div>}
     </>
   );
 }
